@@ -21830,7 +21830,7 @@
                     parent.postMessage("complete", "*")
                 }
                 function sp() {
-                    void 0 !== window.FbPlayableAd ? window.FbPlayableAd.onCTAClick() : void 0 !== window.ExitApi ? ExitApi.exit() : window.install ? window.install() : window.openAppStore ? window.openAppStore() : (rp && mraid.open(window.clickTag),
+                    void 0 !== window.FbPlayableAd ? window.FbPlayableAd.onCTAClick() : void 0 !== window.ExitApi ? ExitApi.exit() : window.gameEnd && window.gameEnd(), window.install ? window.install() : window.openAppStore ? window.openAppStore() : (rp && mraid.open(window.clickTag),
                     parent.postMessage("download", "*"))
                 }
                 let op = [];
@@ -26964,7 +26964,8 @@
                             !r && i && c.isComplete() && (i.show(),
                             r = !0),
                             n || (e += o,
-                            e >= 120 && q()),
+                            e >= 90 && q()),
+                            console.log("TIck >>", e, o),
                             rA.isPaused = document.hidden
                         }
                         l.renderer.render(a, l.camera),
